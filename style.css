@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Sunflower";
+    src: url("/fonts/sunflower.woff2") format("woff2");
+   }
+
+   .intro, .title{
+       font-family: 'Sunflower';
+   }
+
+   button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+ }
+  button.learn-more {
+    width: 12rem;
+    height: auto;
+ }
+  button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: url('img/button-bg.jfif');
+    background-size: 100%;
+    border-radius: 1.625rem;
+ }
+  button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+ }
+  button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+ }
+  button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.25rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+ }
+  button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: white;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+ }
+  button:hover .circle {
+    width: 100%;
+ }
+  button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+ }
+  button:hover .button-text {
+    color: #fff;
+ }
+
+.hamburger-container {
+    background:url(img/ham-bg.jfif);
+    background-size:cover;
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    cursor: pointer;
+    border-radius: 50%;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    margin-top: -115px;
+    margin-left: -123px;
+    z-index: 10;
+  }
+  
+  .hamburger {
+    width: 22px;
+    position: absolute;
+    left: 142px;
+    border-top: 2px solid #fff;
+    cursor: pointer;
+    z-index: 1;
+    top: 136px;
+  }
+  
+  .hamburger:after {
+    content: "";
+    display: block;
+    border-top: 2px solid #fff;
+    margin-top: 4px;
+  }
+  .hamburger:before {
+    content: "";
+    display: block;
+    border-top: 2px solid #fff;
+    margin-top: 4px;
+  }
+  
+  .plus {
+    width: 20px;
+    position: absolute;
+    border-top: 3px solid #fff;
+    cursor: pointer;
+    z-index: 1;
+    left: 86px;
+    top: 165px;
+  }
+  .plus:after {
+    content: "";
+    display: block;
+    border-top: 3px solid #fff;
+    margin-top: -3px;
+    transform: rotate(90deg);
+  }
+  
+  .page-body {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    transition: all 1s ease;
+    transform-origin: 0 0;
+  }
+  
+  .hamburger-container.open {
+    transform: rotate(-50deg);
+  }
+  
+  .page-body.open {
+    /* transform: rotate(-30deg); */
+    display: none;
+  }
+
+  .bg-benef_mobile {
+    background-image: url("img/bg-benef-mobile.png")
+  }
+
+  .bg-benef {
+    background-image: url("img/background-benef.png")
+  }
+
+  .bg-tearoom {
+    background-image: url("img/background-tearoom.png")
+  }
+
+  .bg-blog {
+    background-image: url("img/background-blog.png")
+  }
+
+  .bg-sunny {
+    background-image: url("img/background-sunny.png")
+  }
+
+  .bg-ui {
+    background-image: url("img/background-ui.png")
+  }
+
